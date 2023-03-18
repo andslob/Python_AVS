@@ -1,7 +1,7 @@
 
 a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 b = ['m', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'q']
-c = zip [a, b]
+c = list(zip(a, b))
 # print(a + ' ' + b)
 # i = 0
 # for i in range(len(a)):
