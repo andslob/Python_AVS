@@ -18,9 +18,9 @@ def show_contacts(book: list[dict], error_message: str):
         return False
     else:
         for i, contact in enumerate(book, 1):
-            print(f'{i}. {contact.get("name"): < 20} ' 
-                  f'{contact.get("phone"): < 20} '
-                  f'{contact.get("comment"): < 20}')
+            print(f'{i}. {contact.get("name"):<20} ' 
+                  f'{contact.get("phone"):<20} '
+                  f'{contact.get("comment"):<20}')
         return True
 
 
@@ -29,6 +29,7 @@ def add_contact() -> dict:
     phone = input('Введите номер телефона: ')
     comment = input('Введите комментарий: ')
     return {'name': name, 'phone': phone, 'comment': comment}
+
 
 
 def input_index(message: str):
