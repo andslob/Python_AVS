@@ -15,11 +15,13 @@ def start():
                 view.show_message('Файл успешно сохранен')
             case 3:
                 view.show_contacts(pb, 'Телефонная книга пуста или не открыта')
+                view.show_contacts(pb, 'Телефонная книга пуста или не открыта')
             case 4:
-                model.add_contact(view.add_contact())
+                model.add_contact(view.add_contact()())
             case 5:
                 if view.show_contacts(pb, 'Телефоннаф книга пуста или не открыта'):
                     index = view.input_index('Введите номер изменяемого контакта')
+                    contact = view.change_contact(pb, index)
                     contact = view.change_contact(pb, index)
                     model.change_contact(contact, index)
                     view.show_message(f'Контакт {model.get_phone_book()[index - 1].get("name")} успешно изменен!')

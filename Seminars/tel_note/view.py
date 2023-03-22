@@ -30,14 +30,7 @@ def add_contact() -> dict:
     comment = input('Введите комментарий: ')
     return {'name': name, 'phone': phone, 'comment': comment}
 
-def del_contact(index: int):
-    print('Введите контакт, который необходимо удалить: ')
-    contact = del_contact()
-    return {'name': contact.get('name') if contact.get('name') else book[index - 1].get('name'),
-            'phone': contact.get('phone') if contact.get('phone') else book[index - 1].get('phone'),
-            'comment': contact.get('comment') if contact.get('comment') else book[index - 1].get('comment')}
-
-def input_index(message: str):
+def input_index(message):
     return int(input(message))
 
 def input_search(message):
